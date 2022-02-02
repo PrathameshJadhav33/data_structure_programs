@@ -2,6 +2,8 @@
 
 //program to demonstrate various methods of arraylist and
 //their use
+
+import java.util.Collections;
 import java.util.ArrayList;
 import java.util.ListIterator;
 import java.lang.String;
@@ -53,6 +55,19 @@ public class arraylist {
         while (l1.hasPrevious()) {
             System.out.println("previous():" + l1.previous());
         }
+
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        for (int k = 10; k > 1; k--) {
+            al.add(k);
+        }
+
+        System.out.println("Before sorting:" + al);
+        Collections.sort(al);
+        System.out.println("After sorting:" + al);
+
+        System.out.println("Before shuffle:" + al);
+        Collections.shuffle(al);
+        System.out.println("After shuffle:" + al);
 
     }
 }
