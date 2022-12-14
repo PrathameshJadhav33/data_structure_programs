@@ -131,5 +131,7 @@ public class playfair_cipher {
 
         System.out.println("Encrypted message:" + encrypted_msg);
 
+        sc.close();
+
     }
 }

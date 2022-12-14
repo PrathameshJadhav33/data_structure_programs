@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Quick_sort {
@@ -47,19 +48,22 @@ public class Quick_sort {
     public static void main(String args[]) {
         int[] arr = new int[5];
         Scanner sc = new Scanner(System.in);
-
+        Random random = new Random();
         try {
             System.out.println("Enter 5 elements:");
             for (int i = 0; i < arr.length; i++) {
-                arr[i] = sc.nextInt();
+                arr[i] = random.nextInt(1000);
+                System.out.print("\t" + arr[i]);
+
             }
 
             new Quick_sort().quick_sort1(arr);
+            System.out.println();
 
             System.out.println("Sorted array:");
 
             for (int i = 0; i < arr.length; i++) {
-                System.out.println(arr[i]);
+                System.out.print("\t" + arr[i]);
             }
         } finally {
             sc.close();

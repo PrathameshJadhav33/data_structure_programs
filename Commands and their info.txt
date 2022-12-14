@@ -1,0 +1,127 @@
+//initialize the project or repo
+git init
+
+//------view changes and untracked files
+git status
+
+//------Track all the untracked files or
+//Stage the files
+git add . // add all files for staging
+git add filename //add one file for staging
+
+//------Commit the changes which are staged
+// commit should be given a message 
+// -m specifies message parameter 
+git commit -m "first commit"
+
+
+//-----view all the history of commits
+git log
+
+
+//------reset commits
+//you cant remove random commits
+//bcuz commits are stacked on each other
+
+//hash_of_commit can be found using git //log
+git reset hash_of_commit
+
+
+
+//-----stashing
+// if you dont want to delete current changes but want a clean directory
+// stash command can be used to move 
+//changes to stash area without having to track them
+
+git add . //track the changes
+git stash //stash the changes
+git stash pop // restore the changes to working tree
+
+git stash clear //delete the stash
+
+
+//-----add github repo to your local project
+git add remote origin link
+
+//origin is like a sudo name for the url
+//which we can use later while push/fetch
+
+git remote -v 
+//show all urls attached to the current project
+//their are two urls fetch and push for each url
+
+//-----push changes to your github repo
+
+git push origin master
+
+//here origin is the url from add remote
+//and master is the branch 
+
+
+//------braches
+// checkout shifts the head from curretn branch
+// to the branch specified
+
+git branch b_name
+git checkout b_name
+
+
+//-------merge branch with main
+
+git merge b_name
+
+
+//------clone a repo
+
+git clone url
+
+//------if you open an pull request then all
+//the new commits are also going to that 
+//pull request if the branch is same
+
+//removing a commit from pull request
+
+git reset hash
+git stash //clean the working tree
+git push origin b_name
+
+
+//--------fetch upstream
+
+git chechout main
+git fetch --all --prune
+git reset --hard upstream /main
+git log
+ 
+//or
+
+git pull upstream/main
+git push origin main
+
+
+//-------squashing commits
+// combine multiple commits into 
+// one commit 
+
+git rebase -i hash
+//or
+git reset hash
+git add .
+git commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
